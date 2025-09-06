@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { ClerkProvider, RedirectToSignIn, SignedIn, SignedOut } from "@clerk/nextjs";
+import {
+  ClerkProvider,
+  RedirectToSignIn,
+  SignedIn,
+  SignedOut,
+} from "@clerk/nextjs";
 import ConvexClientProvider from "@/components/providers/ConvexClientProvider";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import Navbar from "@/components/Navbar";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -42,9 +48,9 @@ export default function RootLayout({
             <ConvexClientProvider>
               <SignedIn>
                 <div className="min-h-screen">
-                <Navbar />
-                <main className="px-4 sm:px-6 lg:px-8">{children}</main>
-              </div>
+                  <Navbar />
+                  <main className="px-4 sm:px-6 lg:px-8">{children}</main>
+                </div>
               </SignedIn>
 
               <SignedOut>
@@ -53,6 +59,7 @@ export default function RootLayout({
             </ConvexClientProvider>
           </ClerkProvider>
         </ThemeProvider>
+        <Toaster />
       </body>
     </html>
   );
