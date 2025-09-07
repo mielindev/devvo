@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "./ui/dialog";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import useMeetingActions from "@/hooks/useMeetingActions";
@@ -37,6 +43,11 @@ const MeetingModal = ({
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
+          <DialogDescription>
+            {isJoinMeeting
+              ? "Paste a valid meeting URL to join an existing call."
+              : "Click below to start a new video meeting."}
+          </DialogDescription>
         </DialogHeader>
         <div className="space-y-4 pt-4">
           {isJoinMeeting && (
