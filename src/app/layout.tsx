@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import "@stream-io/video-react-sdk/dist/css/styles.css";
 import "./globals.css";
 import {
   ClerkProvider,
@@ -37,6 +38,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning
       >
         <ThemeProvider
           attribute={"class"}
