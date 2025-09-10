@@ -1,5 +1,11 @@
+import { Interview } from "@/components/MeetingCard";
 import { clsx, type ClassValue } from "clsx";
-import { intervalToDuration } from "date-fns";
+import {
+  addHours,
+  intervalToDuration,
+  isBefore,
+  isWithinInterval,
+} from "date-fns";
 import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
@@ -24,4 +30,25 @@ export const calculateRecordingDuration = (
   }
 
   return `${duration.seconds} seconds`;
+};
+
+export const getMeetingStatus = (interview: Interview) => {
+  const now = new Date();
+  const interviewStartTime = interview.startTime;
+  const endTime = addHours(interviewStartTime, 1);
+
+  if (
+    interview.status === "completed" ||
+    interview.status === "failed" ||
+    interview.status === "succeeded"
+  )
+    return "completed";
+
+  if (isWithinInterval(now, { start: interviewStartTime, end: endTime })) {
+    return "ongoing";
+  }
+  if (isBefore(now, interviewStartTime)) {
+    return "upcoming";
+  }
+  return "completed";
 };
