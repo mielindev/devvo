@@ -38,7 +38,7 @@ export default function Home() {
     <div className="container max-w-7xl mx-auto p-6">
       {/* Welcome section */}
       <div className="rounded-lg bg-card p-6 border shadow-sm mb-10">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent">
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-emerald-500 to-green-400 bg-clip-text text-transparent">
           Welcome back!
         </h1>
         <p className="text-muted-foreground mt-2">
