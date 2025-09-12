@@ -1,5 +1,4 @@
-import { getMeetingStatus } from "@/lib/utils";
-import { Doc } from "../../convex/_generated/dataModel";
+import { getMeetingStatus, Interview } from "@/lib/utils";
 import useMeetingActions from "./../hooks/useMeetingActions";
 import { format } from "date-fns";
 import {
@@ -12,8 +11,6 @@ import {
 import { CalendarIcon } from "lucide-react";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-
-export type Interview = Doc<"interviews">;
 
 const MeetingCard = ({ interview }: { interview: Interview }) => {
   const { joinMeeting } = useMeetingActions();

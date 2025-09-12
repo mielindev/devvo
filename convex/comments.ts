@@ -24,13 +24,13 @@ const addComment = mutation({
 // get comments for an interview
 const getComments = query({
   args: {
-    interviewerId: v.id("interviews"),
+    interviewId: v.id("interviews"),
   },
   handler: async (ctx, args) => {
     const comment = await ctx.db
       .query("comments")
       .withIndex("by_interview_id", (q) =>
-        q.eq("interviewId", args.interviewerId)
+        q.eq("interviewId", args.interviewId)
       )
       .collect();
 

@@ -2,9 +2,9 @@ import { QuickActionType } from "@/constants";
 import { Card } from "./ui/card";
 
 //from-primary/10 via-primary/5 to-transparent
-// from-purple-500/10 via-purple-500/5 to-transparent
-// from-emerald-500/10 via-emerald-500/5 to-transparent
-// from-orange-500/10 via-orange-500/5 to-transparent
+//from-purple-500/10 via-purple-500/5 to-transparent
+//from-blue-500/10 via-blue-500/5 to-transparent
+//from-orange-500/10 via-orange-500/5 to-transparent
 
 const ActionCard = ({
   action,

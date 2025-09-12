@@ -12,8 +12,8 @@ const Navbar = () => {
           href={"/"}
           className="flex items-center gap-2 font-semibold text-2xl mr-6 font-mono hover:opacity-80 transition-opacity"
         >
-          <Puzzle className="size-8 text-blue-500" />
-          <span className="bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent">
+          <Puzzle className="size-8 text-emerald-500" />
+          <span className="bg-gradient-to-r from-emerald-500 to-green-500 bg-clip-text text-transparent">
             Devvo
           </span>
         </Link>
