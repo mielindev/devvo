@@ -81,8 +81,8 @@ export const QUICK_ACTIONS = [
     icon: Calendar,
     title: "Schedule",
     description: "Plan upcoming interviews",
-    color: "emerald-500",
-    gradient: "from-emerald-500/10 via-emerald-500/5 to-transparent",
+    color: "blue-500",
+    gradient: "from-blue-500/10 via-blue-500/5 to-transparent",
   },
   {
     icon: Clock,
